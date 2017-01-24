@@ -1,0 +1,47 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "C++ Launch ",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceRoot}/hello",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceRoot}",
+            "environment": [],
+            "externalConsole": true,
+            "linux": {
+                "MIMode":"lldb"
+        },
+        "osx": {
+            "MIMode": "lldb"
+        },
+        "windows": {
+            "MIMdoe":"gdb",
+            "setupcommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "igoreFailures": true
+                }
+            ]
+
+        }
+     },
+     {
+
+            "name": "C++ Attach",
+            "type": "cppdbg",
+            "request": "attach",
+            "program":"${workspaceRoot}/hello",
+            "processId": "${command.pickProcess}"
+            "linux":{
+                "MIMode": "lldb"
+
+            },
+            "osx": {
+                "MIMode": "lldb"
+    
+
+        },
